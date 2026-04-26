@@ -1,16 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navbar } from "@/components/sections/Navbar";
+import { Hero } from "@/components/sections/Hero";
+import { Stats } from "@/components/sections/Stats";
+import { Services } from "@/components/sections/Services";
+import { About } from "@/components/sections/About";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { Reviews } from "@/components/sections/Reviews";
+import { CTA } from "@/components/sections/CTA";
+import { Footer } from "@/components/sections/Footer";
+import { useEffect } from "react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = "Miswak Dental Hospital & Implant Centre — Crafted Smiles, Compassionate Care";
+    const meta = document.querySelector('meta[name="description"]') || document.head.appendChild(Object.assign(document.createElement('meta'), { name: 'description' }));
+    meta.setAttribute('content', "Hyderabad's trusted dental hospital since 2002. Implants, aligners, laser dentistry & more — delivered with world-class care and warmth.");
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="min-h-screen bg-background">
+      <Navbar />
+      <Hero />
+      <Stats />
+      <Services />
+      <About />
+      <WhyUs />
+      <Reviews />
+      <CTA />
+      <Footer />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
