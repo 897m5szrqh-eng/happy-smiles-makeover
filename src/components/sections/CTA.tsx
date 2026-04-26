@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const CTA = () => (
   <section id="contact" className="py-24 md:py-32">
@@ -24,9 +25,11 @@ export const CTA = () => (
               Experience comprehensive dental services tailored to your needs. Book an appointment today.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button variant="hero" size="xl">Book An Appointment <ArrowRight className="h-5 w-5" /></Button>
-              <a href="https://www.miswakdental.com/contact-us" className="inline-flex items-center gap-2 px-8 h-14 rounded-full border border-primary-foreground/30 hover:bg-primary-foreground/10 transition-smooth">
-                <Phone className="h-4 w-4" /> Contact Us
+              <Button asChild variant="hero" size="xl">
+                <Link to="/contact">Book An Appointment <ArrowRight className="h-5 w-5" /></Link>
+              </Button>
+              <a href="tel:+919000000000" className="inline-flex items-center gap-2 px-8 h-14 rounded-full border border-primary-foreground/30 hover:bg-primary-foreground/10 transition-smooth">
+                <Phone className="h-4 w-4" /> Call Now
               </a>
             </div>
           </div>
