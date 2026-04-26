@@ -19,7 +19,7 @@ export const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/60 backdrop-blur border border-border text-xs font-medium text-primary mb-6"
           >
             <Sparkles className="h-3.5 w-3.5 text-accent" />
-            Trusted since 2002 · Hyderabad's premier dental destination
+            Established November 2002 · 24+ years of trust
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -27,8 +27,9 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-serif text-5xl md:text-7xl lg:text-8xl text-primary leading-[0.95] text-balance"
           >
-            Smiles, <em className="text-accent not-italic font-normal">crafted</em><br />
-            with care.
+            Bringing smiles<br />
+            to people's lives,<br />
+            <em className="text-accent not-italic font-normal">for over 24 years.</em>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -36,7 +37,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-8 text-lg text-muted-foreground max-w-xl text-balance"
           >
-            World-class dental care meets warm, compassionate hospitality. From routine cleanings to advanced implants — your healthiest smile starts here.
+            Experience comprehensive dental services with a personal touch. Miswak Dental Hospital & Implant Centre delivers world-class dental care with compassion, professionalism and excellence.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,9 +46,9 @@ export const Hero = () => {
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <Button variant="hero" size="xl">
-              Book a free consultation <ArrowRight className="h-5 w-5" />
+              Book an appointment <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button variant="outlineDark" size="xl">Explore services</Button>
+            <Button variant="outlineDark" size="xl">Our services</Button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -62,10 +63,10 @@ export const Hero = () => {
             </div>
             <div>
               <div className="flex items-center gap-1">
-                {[...Array(5)].map((_,i) => <Star key={i} className="h-4 w-4 fill-accent text-accent" />)}
-                <span className="ml-1 font-semibold text-primary">4.9</span>
+                {[...Array(5)].map((_,i) => <Star key={i} className={`h-4 w-4 ${i < 4 ? 'fill-accent text-accent' : 'fill-accent/50 text-accent'}`} />)}
+                <span className="ml-1 font-semibold text-primary">4.5</span>
               </div>
-              <div className="text-xs text-muted-foreground">2,000+ verified patient reviews</div>
+              <div className="text-xs text-muted-foreground">2K+ patient reviews</div>
             </div>
           </motion.div>
         </div>
@@ -80,7 +81,6 @@ export const Hero = () => {
             <img src={heroImg} alt="Patient with a healthy radiant smile" className="h-full w-full object-cover" width={1080} height={1350} />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
           </div>
-          {/* Floating cards */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
