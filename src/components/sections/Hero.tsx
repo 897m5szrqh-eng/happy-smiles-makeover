@@ -44,7 +44,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <Button asChild variant="hero" size="xl">
+            <Button asChild variant="hero" size="xl" className="!shadow-none hover:!shadow-none">
               <Link to="/contact">Book an appointment <ArrowRight className="h-5 w-5" /></Link>
             </Button>
             <Button asChild variant="outlineDark" size="xl">
