@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Footer = () => (
   <footer className="bg-primary text-primary-foreground/80 py-16">
     <div className="container">
@@ -14,18 +16,18 @@ export const Footer = () => (
         <div>
           <div className="text-primary-foreground font-medium mb-4">Explore</div>
           <ul className="space-y-2 text-sm">
-            <li><a href="#services" className="hover:text-accent transition-smooth">Services</a></li>
-            <li><a href="#about" className="hover:text-accent transition-smooth">About Us</a></li>
-            <li><a href="#reviews" className="hover:text-accent transition-smooth">Reviews</a></li>
-            <li><a href="#faq" className="hover:text-accent transition-smooth">FAQ</a></li>
+            <li><Link to="/services" className="hover:text-accent transition-smooth">Services</Link></li>
+            <li><Link to="/about" className="hover:text-accent transition-smooth">About Us</Link></li>
+            <li><Link to="/reviews" className="hover:text-accent transition-smooth">Reviews & FAQ</Link></li>
+            <li><Link to="/contact" className="hover:text-accent transition-smooth">Contact</Link></li>
           </ul>
         </div>
         <div>
           <div className="text-primary-foreground font-medium mb-4">Connect</div>
           <ul className="space-y-2 text-sm">
-            <li><a href="https://www.miswakdental.com/contact-us" className="hover:text-accent transition-smooth">Contact Us</a></li>
-            <li><a href="https://www.miswakdental.com/appointments" className="hover:text-accent transition-smooth">Online Appointments</a></li>
-            <li><a href="https://www.miswakdental.com/privacy-policy" className="hover:text-accent transition-smooth">Privacy Policy</a></li>
+            <li><a href="tel:+919000000000" className="hover:text-accent transition-smooth">+91 90000 00000</a></li>
+            <li><a href="mailto:hello@miswakdental.com" className="hover:text-accent transition-smooth">hello@miswakdental.com</a></li>
+            <li><Link to="/contact" className="hover:text-accent transition-smooth">Book Online</Link></li>
           </ul>
         </div>
       </div>

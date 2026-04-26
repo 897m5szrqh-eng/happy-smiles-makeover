@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 export const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-hero">
@@ -43,10 +44,12 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <Button variant="hero" size="xl">
-              Book an appointment <ArrowRight className="h-5 w-5" />
+            <Button asChild variant="hero" size="xl">
+              <Link to="/contact">Book an appointment <ArrowRight className="h-5 w-5" /></Link>
             </Button>
-            <Button variant="outlineDark" size="xl">Our services</Button>
+            <Button asChild variant="outlineDark" size="xl">
+              <Link to="/services">Our services</Link>
+            </Button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
