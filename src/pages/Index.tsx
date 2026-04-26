@@ -1,12 +1,9 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Stats } from "@/components/sections/Stats";
-import { Services } from "@/components/sections/Services";
-import { About } from "@/components/sections/About";
-import { Team } from "@/components/sections/Team";
+import { ServicesPreview } from "@/components/sections/ServicesPreview";
+import { AboutPreview } from "@/components/sections/AboutPreview";
 import { WhyUs } from "@/components/sections/WhyUs";
-import { Reviews } from "@/components/sections/Reviews";
-import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
 import { useEffect } from "react";
@@ -23,12 +20,9 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Stats />
-      <Services />
-      <About />
-      <Team />
+      <ServicesPreview />
+      <AboutPreview />
       <WhyUs />
-      <Reviews />
-      <FAQ />
       <CTA />
       <Footer />
     </main>
