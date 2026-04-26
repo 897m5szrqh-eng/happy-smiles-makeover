@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-smile.jpg";
-
 export const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-hero">
@@ -78,7 +76,7 @@ export const Hero = () => {
           className="lg:col-span-5 relative"
         >
           <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-soft">
-            <img src={heroImg} alt="Patient with a healthy radiant smile" className="h-full w-full object-cover" width={1080} height={1350} />
+            <img src="/treatments/anniversary.jpg" alt="Miswak Dental — celebrating over 24 years of care" className="h-full w-full object-cover" width={1920} height={1080} />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
           </div>
           <motion.div
