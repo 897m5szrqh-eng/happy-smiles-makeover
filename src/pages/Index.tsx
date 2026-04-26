@@ -6,6 +6,10 @@ import { AboutPreview } from "@/components/sections/AboutPreview";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
+import { CEOMessage } from "@/components/sections/CEOMessage";
+import { CoreValues } from "@/components/sections/CoreValues";
+import { Symptoms } from "@/components/sections/Symptoms";
+import { ReviewsPreview } from "@/components/sections/ReviewsPreview";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -20,9 +24,13 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Stats />
-      <ServicesPreview />
       <AboutPreview />
+      <CEOMessage />
+      <CoreValues />
+      <Symptoms />
+      <ServicesPreview />
       <WhyUs />
+      <ReviewsPreview />
       <CTA />
       <Footer />
     </main>
