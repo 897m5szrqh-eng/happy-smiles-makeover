@@ -1,25 +1,21 @@
 import { motion } from "framer-motion";
-import {
-  Zap, Shield, Heart, Smile, Crown, Activity, Pill, Wrench,
-  Scissors, Sliders, AlertCircle, Sparkles, Wand2, Baby
-} from "lucide-react";
 
 const treatments = [
-  { icon: Zap, title: "Laser Dentistry" },
-  { icon: Shield, title: "Advance Gum Treatment" },
-  { icon: Heart, title: "Preventive Dentistry" },
-  { icon: Sliders, title: "Clear Aligners" },
-  { icon: Crown, title: "Bridges & Crowns" },
-  { icon: Smile, title: "Dentures" },
-  { icon: Activity, title: "Dental Implants" },
-  { icon: Pill, title: "Dental Filling" },
-  { icon: Wrench, title: "Root Canal Treatment" },
-  { icon: Scissors, title: "Wisdom Teeth Removal" },
-  { icon: Sliders, title: "Braces & Aligners" },
-  { icon: AlertCircle, title: "Mouth Ulcers" },
-  { icon: Sparkles, title: "Teeth Whitening" },
-  { icon: Wand2, title: "Smile Makeover" },
-  { icon: Baby, title: "Kids Dentistry" },
+  { img: "/treatments/laser.jpg", title: "Laser Dentistry" },
+  { img: "/treatments/gum.jpg", title: "Advance Gum Treatment" },
+  { img: "/treatments/preventive.jpg", title: "Preventive Dentistry" },
+  { img: "/treatments/aligners.jpg", title: "Clear Aligners" },
+  { img: "/treatments/crowns.jpg", title: "Bridges & Crowns" },
+  { img: "/treatments/dentures.jpg", title: "Dentures" },
+  { img: "/treatments/implants.jpg", title: "Dental Implants" },
+  { img: "/treatments/filling.jpg", title: "Dental Filling" },
+  { img: "/treatments/rct.jpg", title: "Root Canal Treatment" },
+  { img: "/treatments/wisdom.jpg", title: "Wisdom Teeth Removal" },
+  { img: "/treatments/braces.jpg", title: "Braces & Aligners" },
+  { img: "/treatments/ulcers.jpg", title: "Mouth Ulcers" },
+  { img: "/treatments/whitening.jpg", title: "Teeth Whitening" },
+  { img: "/treatments/makeover.jpg", title: "Smile Makeover" },
+  { img: "/treatments/kids.jpg", title: "Kids Dentistry" },
 ];
 
 const coreServices = [
@@ -54,12 +50,21 @@ export const Services = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: (i % 5) * 0.06 }}
-            className="group p-6 rounded-2xl bg-card border border-border hover:border-accent/50 hover:shadow-card transition-smooth cursor-pointer"
+            className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-card"
           >
-            <div className="h-11 w-11 rounded-xl bg-accent-soft grid place-items-center mb-4 group-hover:bg-gradient-accent transition-smooth">
-              <t.icon className="h-5 w-5 text-accent group-hover:text-accent-foreground transition-smooth" />
+            <img
+              src={t.img}
+              alt={t.title}
+              loading="lazy"
+              width={480}
+              height={480}
+              className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-smooth duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent opacity-90 group-hover:opacity-95 transition-smooth" />
+            <div className="absolute inset-x-0 bottom-0 p-5">
+              <h3 className="font-serif text-lg md:text-xl text-primary-foreground leading-tight">{t.title}</h3>
+              <div className="mt-1 h-px w-8 bg-accent group-hover:w-16 transition-smooth" />
             </div>
-            <h3 className="font-serif text-base text-primary leading-tight">{t.title}</h3>
           </motion.div>
         ))}
       </div>
