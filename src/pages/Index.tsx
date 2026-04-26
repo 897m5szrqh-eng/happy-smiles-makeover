@@ -10,6 +10,7 @@ import { CEOMessage } from "@/components/sections/CEOMessage";
 import { CoreValues } from "@/components/sections/CoreValues";
 import { Symptoms } from "@/components/sections/Symptoms";
 import { ReviewsPreview } from "@/components/sections/ReviewsPreview";
+import { FAQ } from "@/components/sections/FAQ";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -31,6 +32,7 @@ const Index = () => {
       <ServicesPreview />
       <WhyUs />
       <ReviewsPreview />
+      <FAQ />
       <CTA />
       <Footer />
     </main>
