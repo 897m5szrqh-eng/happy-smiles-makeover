@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "1 Lac+", label: "Happy patients" },
-  { value: "10K+", label: "Implants placed" },
-  { value: "25K+", label: "Ortho cases" },
-  { value: "23+", label: "Years of trust" },
+  { value: "1 Lac+", label: "Happy Patients" },
+  { value: "10K+", label: "Implants Placed" },
+  { value: "25K+", label: "Successful Ortho Cases" },
+  { value: "4.5★", label: "2K+ Patient Reviews" },
 ];
 
 export const Stats = () => (

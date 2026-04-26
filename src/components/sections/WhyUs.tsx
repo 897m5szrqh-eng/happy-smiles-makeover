@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, HeartHandshake, Microscope, Clock } from "lucide-react";
+import { ShieldCheck, HeartHandshake, Microscope, Award } from "lucide-react";
 
 const items = [
-  { icon: ShieldCheck, title: "Trust & Safety", desc: "Strict sterilisation protocols and US-trained leadership." },
-  { icon: HeartHandshake, title: "Compassion First", desc: "We treat patients the way we'd want our family treated." },
-  { icon: Microscope, title: "Advanced Tech", desc: "Digital X-rays, intraoral scanners and laser systems." },
-  { icon: Clock, title: "Open 7 Days", desc: "Flexible appointments that fit around your life." },
+  { icon: Award, title: "24+ Years Established", desc: "Premium dental healthcare since November 2002 in the heart of the city." },
+  { icon: HeartHandshake, title: "Personal Touch", desc: "Comprehensive dental services delivered with personalised attention and genuine care." },
+  { icon: Microscope, title: "Latest Technology", desc: "State-of-the-art Implant Centre with the latest equipment and innovative dental technology." },
+  { icon: ShieldCheck, title: "Painless Dentistry", desc: "Stress-free, pain-free experience designed around your comfort." },
 ];
 
 export const WhyUs = () => (
@@ -14,7 +14,7 @@ export const WhyUs = () => (
       <div className="max-w-2xl mb-16">
         <div className="text-sm uppercase tracking-[0.25em] text-accent mb-4">Why Miswak</div>
         <h2 className="font-serif text-4xl md:text-6xl text-primary text-balance">
-          A standard of care you can <em className="not-italic text-accent">feel.</em>
+          Comprehensive care, with a <em className="not-italic text-accent">personal touch.</em>
         </h2>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
