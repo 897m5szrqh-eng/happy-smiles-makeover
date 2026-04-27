@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+  (function () {
+    const path = window.location.pathname;
+    const repo = "/happy-smiles-makeover";
+    if (path.startsWith(repo) && path !== repo + "/") {
+      window.location.replace(repo + "/#" + path.replace(repo, ""));
+    }
+  })();
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.png" type="image/png" />
@@ -20,5 +29,7 @@
   <body>
     <div id="root"></div>
     <script type="module" src="./src/main.tsx"></script>
+
+  
   </body>
 </html>
