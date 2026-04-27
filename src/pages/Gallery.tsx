@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { CTA } from "@/components/sections/CTA";
-import { treatments } from "@/data/treatments";
+import { galleryItems } from "@/data/gallery";
 
 const Gallery = () => {
   useEffect(() => {
@@ -36,9 +36,9 @@ const Gallery = () => {
       <section className="py-20">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {treatments.map((t, i) => (
+            {galleryItems.map((t, i) => (
               <motion.figure
-                key={t.slug}
+                key={t.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
