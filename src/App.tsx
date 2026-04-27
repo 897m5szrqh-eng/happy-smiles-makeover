@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -22,22 +22,18 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:slug" element={<TreatmentDetail />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/international-patients" element={<InternationalPatients />} />
-          <Route path="/terms" element={<Terms />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      
-      </BrowserRouter>
+<Routes>
+  <Route path="/" element={<Index />} />
+  <Route path="/services" element={<Services />} />
+  <Route path="/services/:slug" element={<TreatmentDetail />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/reviews" element={<Reviews />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/gallery" element={<Gallery />} />
+  <Route path="/international-patients" element={<InternationalPatients />} />
+  <Route path="/terms" element={<Terms />} />
+  <Route path="*" element={<NotFound />} />
+</Routes>
     </TooltipProvider>
   </QueryClientProvider>
 );
