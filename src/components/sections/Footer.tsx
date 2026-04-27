@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/miswak-logo.png";
+import { contactInfo } from "@/data/contact";
 
 export const Footer = () => (
   <footer className="bg-primary text-primary-foreground/80 py-16">
@@ -28,8 +29,10 @@ export const Footer = () => (
         <div>
           <div className="text-primary-foreground font-medium mb-4">Connect</div>
           <ul className="space-y-2 text-sm">
-            <li><a href="tel:+919000000000" className="hover:text-accent transition-smooth">+91 90000 00000</a></li>
-            <li><a href="mailto:hello@miswakdental.com" className="hover:text-accent transition-smooth">hello@miswakdental.com</a></li>
+            <li><a href={contactInfo.phoneHref} className="hover:text-accent transition-smooth">{contactInfo.phone}</a></li>
+            <li><a href={contactInfo.emergencyPhoneHref} className="hover:text-accent transition-smooth">Emergency: {contactInfo.emergencyPhone}</a></li>
+            <li><a href={`mailto:${contactInfo.email}`} className="hover:text-accent transition-smooth">{contactInfo.email}</a></li>
+            <li><a href={contactInfo.mapsUrl} target="_blank" rel="noreferrer" className="hover:text-accent transition-smooth">Masab Tank, Hyderabad</a></li>
             <li><Link to="/contact" className="hover:text-accent transition-smooth">Book Online</Link></li>
             <li><Link to="/terms" className="hover:text-accent transition-smooth">Terms & Conditions</Link></li>
           </ul>

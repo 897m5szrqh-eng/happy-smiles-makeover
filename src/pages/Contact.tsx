@@ -3,9 +3,10 @@ import { Footer } from "@/components/sections/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, AlertCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { contactInfo } from "@/data/contact";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -27,10 +28,11 @@ const Contact = () => {
   };
 
   const info = [
-    { icon: Phone, label: "Call us", value: "+91 90000 00000" },
-    { icon: Mail, label: "Email", value: "hello@miswakdental.com" },
-    { icon: MapPin, label: "Visit", value: "Hyderabad, Telangana, India" },
-    { icon: Clock, label: "Hours", value: "Mon–Sat 9 AM – 9 PM · Sun 10 AM – 6 PM" },
+    { icon: Phone, label: "Call us", value: contactInfo.phone, href: contactInfo.phoneHref },
+    { icon: AlertCircle, label: "Dental Emergency", value: contactInfo.emergencyPhone, href: contactInfo.emergencyPhoneHref },
+    { icon: Mail, label: "Email", value: contactInfo.email, href: `mailto:${contactInfo.email}` },
+    { icon: MapPin, label: "Visit", value: contactInfo.address, href: contactInfo.mapsUrl },
+    { icon: Clock, label: "Hours", value: `${contactInfo.hours.weekdays} · ${contactInfo.hours.sunday}` },
   ];
 
   return (
@@ -85,7 +87,13 @@ const Contact = () => {
           {/* Info */}
           <aside className="lg:col-span-5 space-y-4">
             {info.map((i) => (
-              <div key={i.label} className="bg-secondary rounded-2xl p-6 flex gap-4 items-start">
+              <a
+                key={i.label}
+                href={"href" in i && i.href ? i.href : undefined}
+                target={i.href?.startsWith("http") ? "_blank" : undefined}
+                rel={i.href?.startsWith("http") ? "noreferrer" : undefined}
+                className="bg-secondary rounded-2xl p-6 flex gap-4 items-start hover:bg-secondary/70 transition-smooth"
+              >
                 <div className="h-11 w-11 rounded-xl bg-gradient-accent grid place-items-center text-accent-foreground shrink-0">
                   <i.icon className="h-5 w-5" />
                 </div>
@@ -93,7 +101,7 @@ const Contact = () => {
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">{i.label}</div>
                   <div className="mt-1 font-serif text-lg text-primary">{i.value}</div>
                 </div>
-              </div>
+              </a>
             ))}
           </aside>
         </div>
