@@ -3,11 +3,14 @@ import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import logo from "@/assets/miswak-logo.png";
 
 const links = [
   { label: "Home", to: "/" },
   { label: "Services", to: "/services" },
+  { label: "Gallery", to: "/gallery" },
   { label: "About", to: "/about" },
+  { label: "International Patients", to: "/international-patients" },
   { label: "Reviews", to: "/reviews" },
   { label: "Contact", to: "/contact" },
 ];
@@ -25,7 +28,7 @@ export const Navbar = () => {
     >
       <nav className="container flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-2">
-          <div className="h-10 w-10 rounded-full bg-gradient-primary grid place-items-center text-primary-foreground font-serif text-xl">M</div>
+          <img src={logo} alt="Miswak Dental Hospital logo" width={40} height={40} className="h-10 w-10 object-contain" />
           <div className="leading-tight">
             <div className="font-serif text-lg text-primary">Miswak</div>
             <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Dental & Implant Centre</div>
