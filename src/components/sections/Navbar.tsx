@@ -49,7 +49,7 @@ export const Navbar = () => {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <a href="tel:+919000000000" className="hidden sm:flex items-center gap-2 text-sm font-medium text-primary">
+          <a href="tel:+914023346260" className="hidden sm:flex items-center gap-2 text-sm font-medium text-primary">
             <Phone className="h-4 w-4" /> Call
           </a>
           <Button asChild variant="hero" size="sm" className="hidden sm:inline-flex !shadow-none hover:!shadow-none">
